@@ -1,0 +1,3461 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk+" version="2.24"/>
+  <!-- interface-naming-policy project-wide -->
+  <object class="GtkWindow" id="calNewCli">
+    <property name="width_request">400</property>
+    <property name="height_request">240</property>
+    <property name="can_focus">False</property>
+    <property name="title" translatable="yes">Selección de fecha de nacimiento</property>
+    <property name="resizable">False</property>
+    <property name="modal">True</property>
+    <property name="window_position">center-always</property>
+    <property name="icon">icono_app.ico</property>
+    <signal name="destroy" handler="on_calNewCli_destroy" swapped="no"/>
+    <child>
+      <object class="GtkVBox" id="vbox3">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <object class="GtkCalendar" id="calendarNewCli">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="year">2018</property>
+            <property name="month">10</property>
+            <property name="day">4</property>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkFixed" id="fixed15">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <child>
+              <object class="GtkButton" id="cogeNewFechaNacCli">
+                <property name="width_request">200</property>
+                <property name="height_request">47</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="use_underline">True</property>
+                <signal name="clicked" handler="on_cogeNewFechaNacCli_clicked" swapped="no"/>
+                <child>
+                  <object class="GtkHBox" id="hbox4">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <child>
+                      <object class="GtkImage" id="image14">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="pixbuf">calendar.gif</property>
+                      </object>
+                      <packing>
+                        <property name="expand">True</property>
+                        <property name="fill">True</property>
+                        <property name="position">0</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="label4">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="xalign">0</property>
+                        <property name="label" translatable="yes">Coger _Fecha</property>
+                        <property name="use_underline">True</property>
+                      </object>
+                      <packing>
+                        <property name="expand">True</property>
+                        <property name="fill">True</property>
+                        <property name="position">1</property>
+                      </packing>
+                    </child>
+                  </object>
+                </child>
+              </object>
+              <packing>
+                <property name="x">100</property>
+                <property name="y">7</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkWindow" id="calendario">
+    <property name="width_request">400</property>
+    <property name="height_request">240</property>
+    <property name="can_focus">False</property>
+    <property name="title" translatable="yes">Selección fecha inicio venta</property>
+    <property name="resizable">False</property>
+    <property name="modal">True</property>
+    <property name="window_position">center-always</property>
+    <property name="icon">icono_app.ico</property>
+    <signal name="destroy" handler="on_calendario_destroy" swapped="no"/>
+    <child>
+      <object class="GtkVBox" id="vbox2">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <object class="GtkCalendar" id="calendar">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="year">2018</property>
+            <property name="month">10</property>
+            <property name="day">4</property>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkFixed" id="fixed13">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <child>
+              <object class="GtkButton" id="cogeFecha">
+                <property name="width_request">200</property>
+                <property name="height_request">47</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="use_underline">True</property>
+                <signal name="clicked" handler="on_cogeFecha_clicked" swapped="no"/>
+                <child>
+                  <object class="GtkHBox" id="hbox2">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <child>
+                      <object class="GtkImage" id="image4">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="pixbuf">calendar.gif</property>
+                      </object>
+                      <packing>
+                        <property name="expand">True</property>
+                        <property name="fill">True</property>
+                        <property name="position">0</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="label2">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="xalign">0</property>
+                        <property name="label" translatable="yes">Coger _Fecha</property>
+                        <property name="use_underline">True</property>
+                      </object>
+                      <packing>
+                        <property name="expand">True</property>
+                        <property name="fill">True</property>
+                        <property name="position">1</property>
+                      </packing>
+                    </child>
+                  </object>
+                </child>
+              </object>
+              <packing>
+                <property name="x">100</property>
+                <property name="y">7</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkWindow" id="calendarioFinVenta">
+    <property name="width_request">400</property>
+    <property name="height_request">240</property>
+    <property name="can_focus">False</property>
+    <property name="title" translatable="yes">Selección fecha fin venta</property>
+    <property name="resizable">False</property>
+    <property name="modal">True</property>
+    <property name="window_position">center-always</property>
+    <property name="icon">icono_app.ico</property>
+    <signal name="destroy" handler="on_calendarioFinVenta_destroy" swapped="no"/>
+    <child>
+      <object class="GtkVBox" id="vbox1">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <object class="GtkCalendar" id="calendarFinVenta">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="year">2018</property>
+            <property name="month">10</property>
+            <property name="day">4</property>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkFixed" id="fixed14">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <child>
+              <object class="GtkButton" id="cogeFechaFinVenta">
+                <property name="width_request">200</property>
+                <property name="height_request">47</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="use_underline">True</property>
+                <signal name="clicked" handler="on_cogeFechaFinVenta_clicked" swapped="no"/>
+                <child>
+                  <object class="GtkHBox" id="hbox3">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <child>
+                      <object class="GtkImage" id="image5">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="pixbuf">calendar.gif</property>
+                      </object>
+                      <packing>
+                        <property name="expand">True</property>
+                        <property name="fill">True</property>
+                        <property name="position">0</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="label3">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="xalign">0</property>
+                        <property name="label" translatable="yes">Coger _Fecha</property>
+                        <property name="use_underline">True</property>
+                      </object>
+                      <packing>
+                        <property name="expand">True</property>
+                        <property name="fill">True</property>
+                        <property name="position">1</property>
+                      </packing>
+                    </child>
+                  </object>
+                </child>
+              </object>
+              <packing>
+                <property name="x">100</property>
+                <property name="y">7</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkMessageDialog" id="confirmar">
+    <property name="can_focus">False</property>
+    <property name="tooltip_text" translatable="yes">La operación que acaba de realizar se ha llevado a acabo correctamente</property>
+    <property name="border_width">5</property>
+    <property name="title" translatable="yes">Atención</property>
+    <property name="resizable">False</property>
+    <property name="window_position">center</property>
+    <property name="icon">icono_app.ico</property>
+    <property name="type_hint">dialog</property>
+    <property name="skip_taskbar_hint">True</property>
+    <property name="message_type">warning</property>
+    <property name="buttons">ok-cancel</property>
+    <property name="text" translatable="yes">¡Atención!</property>
+    <child internal-child="vbox">
+      <object class="GtkVBox" id="dialog-vbox1">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="spacing">2</property>
+        <child internal-child="action_area">
+          <object class="GtkHButtonBox" id="dialog-action_area1">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="layout_style">center</property>
+            <child>
+              <placeholder/>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkMessageDialog" id="eliminarAviso">
+    <property name="can_focus">False</property>
+    <property name="tooltip_text" translatable="yes">Eliminar el elemento seleccionado</property>
+    <property name="border_width">5</property>
+    <property name="title" translatable="yes">Eliminar</property>
+    <property name="resizable">False</property>
+    <property name="modal">True</property>
+    <property name="window_position">center-always</property>
+    <property name="icon">icono_app.ico</property>
+    <property name="type_hint">dialog</property>
+    <property name="skip_taskbar_hint">True</property>
+    <property name="urgency_hint">True</property>
+    <property name="message_type">warning</property>
+    <property name="text" translatable="yes">¿Está seguro de que desea eliminar el elemento seleccionado?</property>
+    <child internal-child="vbox">
+      <object class="GtkVBox" id="dialog-vbox">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="spacing">2</property>
+        <child internal-child="action_area">
+          <object class="GtkHButtonBox" id="dialog-action_area">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="layout_style">end</property>
+            <child>
+              <object class="GtkButton" id="button4Eliminar">
+                <property name="label" translatable="yes">Si, eliminar</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">False</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="button5Cancelar">
+                <property name="label" translatable="yes">Cancelar</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">False</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+    <action-widgets>
+      <action-widget response="0">button4Eliminar</action-widget>
+      <action-widget response="0">button5Cancelar</action-widget>
+    </action-widgets>
+  </object>
+  <object class="GtkMessageDialog" id="exitoAviso">
+    <property name="can_focus">False</property>
+    <property name="tooltip_text" translatable="yes">La operación que acaba de realizar se ha llevado a acabo correctamente</property>
+    <property name="border_width">5</property>
+    <property name="title" translatable="yes">Éxito</property>
+    <property name="resizable">False</property>
+    <property name="window_position">center</property>
+    <property name="icon">icono_app.ico</property>
+    <property name="type_hint">dialog</property>
+    <property name="skip_taskbar_hint">True</property>
+    <property name="text" translatable="yes">La operación se ha realizado con éxito</property>
+    <child internal-child="vbox">
+      <object class="GtkVBox" id="dialog-vbox1-exito">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="spacing">2</property>
+        <child internal-child="action_area">
+          <object class="GtkHButtonBox" id="dialog-action_exito">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="layout_style">center</property>
+            <child>
+              <object class="GtkButton" id="exitoAvisoBtn">
+                <property name="label" translatable="yes">Aceptar</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">False</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+    <action-widgets>
+      <action-widget response="0">exitoAvisoBtn</action-widget>
+    </action-widgets>
+  </object>
+  <object class="GtkImage" id="image10">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="stock">gtk-help</property>
+  </object>
+  <object class="GtkImage" id="image11">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="stock">gtk-help</property>
+  </object>
+  <object class="GtkImage" id="image12">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="stock">gtk-help</property>
+  </object>
+  <object class="GtkImage" id="image13">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="stock">gtk-about</property>
+  </object>
+  <object class="GtkImage" id="image2">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="stock">gtk-refresh</property>
+  </object>
+  <object class="GtkImage" id="image3">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="stock">gtk-quit</property>
+  </object>
+  <object class="GtkWindow" id="main">
+    <property name="width_request">700</property>
+    <property name="height_request">480</property>
+    <property name="can_focus">False</property>
+    <property name="title" translatable="yes">Gestión de viajes APP</property>
+    <property name="resizable">False</property>
+    <property name="window_position">center</property>
+    <property name="icon">icono_app.ico</property>
+    <child>
+      <object class="GtkFixed" id="fixed1">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <object class="GtkMenuBar" id="menubar1">
+            <property name="width_request">704</property>
+            <property name="height_request">22</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <child>
+              <object class="GtkMenuItem" id="menuitem1">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="tooltip_text" translatable="yes">Opciones del programa</property>
+                <property name="label" translatable="yes">_Archivo</property>
+                <property name="use_underline">True</property>
+                <child type="submenu">
+                  <object class="GtkMenu" id="menu1">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <child>
+                      <object class="GtkImageMenuItem" id="acercaDe">
+                        <property name="label" translatable="yes">Acerca De</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="tooltip_text" translatable="yes">Información del programa</property>
+                        <property name="image">image13</property>
+                        <property name="use_stock">False</property>
+                        <signal name="activate" handler="on_acercaDe_activate" swapped="no"/>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkImageMenuItem" id="ayuda">
+                        <property name="label" translatable="yes">Manual de usuario</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="tooltip_text" translatable="yes">Abre un manual de usuario con la ayuda.</property>
+                        <property name="image">image10</property>
+                        <property name="use_stock">False</property>
+                        <signal name="activate" handler="on_ayuda_activate" swapped="no"/>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkImageMenuItem" id="reiniciaBD">
+                        <property name="label" translatable="yes">Reiniciar BD</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="tooltip_text" translatable="yes">Reiniciar base de datos</property>
+                        <property name="image">image2</property>
+                        <property name="use_stock">False</property>
+                        <signal name="activate" handler="on_reiniciaBD_activate" swapped="no"/>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkImageMenuItem" id="salirApp">
+                        <property name="label">Cerrar aplicación</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="tooltip_text" translatable="yes">Cerrar y salir de la aplicación</property>
+                        <property name="image">image3</property>
+                        <property name="use_stock">False</property>
+                        <signal name="activate" handler="on_salirApp_activate" swapped="no"/>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkHBox" id="hbox1">
+            <property name="width_request">697</property>
+            <property name="height_request">452</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <child>
+              <object class="GtkFixed" id="fixed2">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <child>
+                  <object class="GtkLabel" id="label1">
+                    <property name="width_request">349</property>
+                    <property name="height_request">86</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="tooltip_text" translatable="yes">Menú principal - Aplicación de gestión de viajes</property>
+                    <property name="label" translatable="yes">Gestión de viajes</property>
+                    <attributes>
+                      <attribute name="weight" value="bold"/>
+                      <attribute name="foreground" value="#000000000000"/>
+                      <attribute name="scale" value="3"/>
+                    </attributes>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkButton" id="button_main_clientes">
+                    <property name="label" translatable="yes">_Clientes</property>
+                    <property name="width_request">170</property>
+                    <property name="height_request">80</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <property name="tooltip_text" translatable="yes">Gestionar clientes</property>
+                    <property name="use_underline">True</property>
+                    <signal name="clicked" handler="on_button_main_clientes_clicked" swapped="no"/>
+                  </object>
+                  <packing>
+                    <property name="x">42</property>
+                    <property name="y">101</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="button_main_paquetes">
+                    <property name="label" translatable="yes">_Paquetes</property>
+                    <property name="width_request">170</property>
+                    <property name="height_request">80</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <property name="tooltip_text" translatable="yes">Gestionar paquetes</property>
+                    <property name="use_underline">True</property>
+                    <signal name="clicked" handler="on_button_main_paquetes_clicked" swapped="no"/>
+                  </object>
+                  <packing>
+                    <property name="x">42</property>
+                    <property name="y">220</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="button_main_ventas">
+                    <property name="label" translatable="yes">_Ventas</property>
+                    <property name="width_request">170</property>
+                    <property name="height_request">80</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <property name="tooltip_text" translatable="yes">Gestionar ventas</property>
+                    <property name="use_underline">True</property>
+                    <signal name="clicked" handler="on_button_main_ventas_clicked" swapped="no"/>
+                  </object>
+                  <packing>
+                    <property name="x">42</property>
+                    <property name="y">342</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkFixed" id="fixed3">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <child>
+                  <object class="GtkImage" id="image1">
+                    <property name="width_request">276</property>
+                    <property name="height_request">323</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="tooltip_text" translatable="yes">Logo de gestión de viajes</property>
+                    <property name="pixbuf">logo.png</property>
+                  </object>
+                  <packing>
+                    <property name="y">64</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="y">22</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkImage" id="image9">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="stock">gtk-refresh</property>
+  </object>
+  <object class="GtkListStore" id="liststore1">
+    <columns>
+      <!-- column-name gchararray1 -->
+      <column type="gchararray"/>
+      <!-- column-name gchar1 -->
+      <column type="gchar"/>
+    </columns>
+  </object>
+  <object class="GtkListStore" id="liststore2">
+    <columns>
+      <!-- column-name nombrePaq -->
+      <column type="gchararray"/>
+      <!-- column-name precioPaq -->
+      <column type="gint"/>
+      <!-- column-name hospedajePaq -->
+      <column type="gchararray"/>
+      <!-- column-name duracionPaq -->
+      <column type="gchararray"/>
+      <!-- column-name destinoPaq -->
+      <column type="gchararray"/>
+      <!-- column-name transportePaq -->
+      <column type="gchararray"/>
+      <!-- column-name idPaq -->
+      <column type="gchararray"/>
+    </columns>
+  </object>
+  <object class="GtkListStore" id="liststore3">
+    <columns>
+      <!-- column-name fechaVentaVenta -->
+      <column type="gchararray"/>
+      <!-- column-name fechaInicioVenta -->
+      <column type="gchararray"/>
+      <!-- column-name fechaFinVenta -->
+      <column type="gchararray"/>
+      <!-- column-name Cliente -->
+      <column type="gchararray"/>
+      <!-- column-name Paquete -->
+      <column type="gchararray"/>
+      <!-- column-name idVenta -->
+      <column type="gchararray"/>
+    </columns>
+  </object>
+  <object class="GtkListStore" id="liststore4">
+    <columns>
+      <!-- column-name gchararray1 -->
+      <column type="gchararray"/>
+    </columns>
+    <data>
+      <row>
+        <col id="0" translatable="yes">Nombre</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">Apellidos</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">Dni</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">Pasaporte</col>
+      </row>
+    </data>
+  </object>
+  <object class="GtkListStore" id="liststore5">
+    <columns>
+      <!-- column-name gchararray1 -->
+      <column type="gchararray"/>
+    </columns>
+    <data>
+      <row>
+        <col id="0" translatable="yes">Nombre</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">Destino</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">Precio</col>
+      </row>
+    </data>
+  </object>
+  <object class="GtkWindow" id="paquetes">
+    <property name="width_request">740</property>
+    <property name="height_request">490</property>
+    <property name="can_focus">False</property>
+    <property name="title" translatable="yes">Gestión de paquetes</property>
+    <property name="resizable">False</property>
+    <property name="modal">True</property>
+    <property name="window_position">center</property>
+    <property name="icon">icono_app.ico</property>
+    <signal name="destroy" handler="on_paquetes_destroy" swapped="no"/>
+    <child>
+      <object class="GtkFixed" id="fixed5">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <object class="GtkLabel" id="label1_titulo_paq1">
+            <property name="width_request">221</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="tooltip_text" translatable="yes">Gestión de paquetes</property>
+            <property name="ypad">6</property>
+            <property name="label" translatable="yes">PAQUETES</property>
+            <attributes>
+              <attribute name="weight" value="bold"/>
+              <attribute name="foreground" value="#000000000000"/>
+              <attribute name="scale" value="3"/>
+            </attributes>
+          </object>
+        </child>
+        <child>
+          <object class="GtkButton" id="button_add_paq">
+            <property name="label" translatable="yes">_Añadir</property>
+            <property name="width_request">170</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="tooltip_text" translatable="yes">Añadir un paquete</property>
+            <property name="use_underline">True</property>
+            <signal name="clicked" handler="on_button_add_paq_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">33</property>
+            <property name="y">90</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="button_mod_paq">
+            <property name="label" translatable="yes">_Modificar</property>
+            <property name="width_request">170</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="tooltip_text" translatable="yes">Modificar un paquete previamente seleccionado del listado</property>
+            <property name="use_underline">True</property>
+            <signal name="clicked" handler="on_button_mod_paq_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">33</property>
+            <property name="y">220</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="button_del_paq">
+            <property name="label" translatable="yes">_Eliminar</property>
+            <property name="width_request">170</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="tooltip_text" translatable="yes">Eliminar un paquete previamente seleccionado del listado</property>
+            <property name="use_underline">True</property>
+            <signal name="clicked" handler="on_button_del_paq_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">33</property>
+            <property name="y">350</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="entry1_busqPaq">
+            <property name="width_request">180</property>
+            <property name="height_request">32</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="tooltip_text" translatable="yes">Introduce texto a buscar</property>
+            <property name="invisible_char">●</property>
+            <property name="text" translatable="yes">Introduce tu búsqueda...</property>
+            <property name="invisible_char_set">True</property>
+            <property name="primary_icon_activatable">False</property>
+            <property name="secondary_icon_activatable">False</property>
+            <property name="primary_icon_sensitive">True</property>
+            <property name="secondary_icon_sensitive">True</property>
+          </object>
+          <packing>
+            <property name="x">401</property>
+            <property name="y">25</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="paq_busca_pa">
+            <property name="label" translatable="yes">_Buscar por</property>
+            <property name="width_request">100</property>
+            <property name="height_request">35</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="tooltip_text" translatable="yes">Buscar paquete.
+Previamente has de escoger un criterio de búsqueda y escribirlo 
+para activar el botón.</property>
+            <property name="use_underline">True</property>
+            <signal name="clicked" handler="on_paq_busca_pa_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">610</property>
+            <property name="y">23</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkScrolledWindow" id="scrolledwindow2">
+            <property name="width_request">470</property>
+            <property name="height_request">387</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="tooltip_text" translatable="yes">Listado de paquetes.
+Selecciona un paquete o haz doble click para poder modificarlo o eliminarlo</property>
+            <property name="hscrollbar_policy">automatic</property>
+            <property name="vscrollbar_policy">automatic</property>
+            <child>
+              <object class="GtkTreeView" id="treeview2Paq">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="model">liststore2</property>
+                <property name="headers_clickable">False</property>
+                <property name="search_column">0</property>
+                <signal name="cursor-changed" handler="on_treeview2Paq_cursor_changed" swapped="no"/>
+                <signal name="button-press-event" handler="on_treeview2Paq_button_press_event" swapped="no"/>
+                <signal name="row-activated" handler="on_treeview2Paq_row_activated" swapped="no"/>
+                <child>
+                  <object class="GtkTreeViewColumn" id="treeviewcolumn9">
+                    <property name="min_width">80</property>
+                    <property name="title" translatable="yes">Nombre</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkTreeViewColumn" id="treeviewcolumn10">
+                    <property name="min_width">60</property>
+                    <property name="title" translatable="yes">Precio</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkTreeViewColumn" id="treeviewcolumn11">
+                    <property name="min_width">70</property>
+                    <property name="title" translatable="yes">Destino</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkTreeViewColumn" id="treeviewcolumn12">
+                    <property name="min_width">80</property>
+                    <property name="title" translatable="yes">Duración</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkTreeViewColumn" id="treeviewcolumn13">
+                    <property name="min_width">80</property>
+                    <property name="title" translatable="yes">Hospedaje</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkTreeViewColumn" id="treeviewcolumn14">
+                    <property name="min_width">50</property>
+                    <property name="title" translatable="yes">Transporte</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="x">237</property>
+            <property name="y">89</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkComboBox" id="comboboxPaquetes">
+            <property name="width_request">138</property>
+            <property name="height_request">32</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="tooltip_text" translatable="yes">Selecciona un criterio de búsqueda</property>
+            <property name="model">liststore5</property>
+            <signal name="changed" handler="on_comboboxPaquetes_changed" swapped="no"/>
+            <child>
+              <object class="GtkCellRendererText" id="cellrenderertext2"/>
+              <attributes>
+                <attribute name="text">0</attribute>
+              </attributes>
+            </child>
+          </object>
+          <packing>
+            <property name="x">233</property>
+            <property name="y">25</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="aMainDesdePaq">
+            <property name="width_request">170</property>
+            <property name="height_request">33</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="tooltip_text" translatable="yes">Salir al menú principal</property>
+            <property name="use_underline">True</property>
+            <signal name="clicked" handler="on_aMainDesdePaq_clicked" swapped="no"/>
+            <child>
+              <object class="GtkImage" id="image8">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="stock">gtk-quit</property>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="x">33</property>
+            <property name="y">445</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkListStore" id="liststore6">
+    <columns>
+      <!-- column-name gchararray1 -->
+      <column type="gchararray"/>
+    </columns>
+    <data>
+      <row>
+        <col id="0" translatable="yes">Cliente</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">Paquete</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">Fecha de inicio</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">Fecha de fin</col>
+      </row>
+    </data>
+  </object>
+  <object class="GtkWindow" id="ventas">
+    <property name="width_request">740</property>
+    <property name="height_request">490</property>
+    <property name="can_focus">False</property>
+    <property name="title" translatable="yes">Gestión de Ventas</property>
+    <property name="resizable">False</property>
+    <property name="modal">True</property>
+    <property name="window_position">center</property>
+    <property name="icon">icono_app.ico</property>
+    <signal name="destroy" handler="on_ventas_destroy" swapped="no"/>
+    <child>
+      <object class="GtkFixed" id="fixed6">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <object class="GtkLabel" id="label1_titulo_vent">
+            <property name="width_request">221</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="tooltip_text" translatable="yes">Gestión de ventas</property>
+            <property name="ypad">6</property>
+            <property name="label" translatable="yes">VENTAS</property>
+            <attributes>
+              <attribute name="weight" value="bold"/>
+              <attribute name="foreground" value="#000000000000"/>
+              <attribute name="scale" value="3"/>
+            </attributes>
+          </object>
+        </child>
+        <child>
+          <object class="GtkButton" id="button1_add_vent">
+            <property name="label" translatable="yes">_Añadir</property>
+            <property name="width_request">170</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="tooltip_text" translatable="yes">Añadir una venta</property>
+            <property name="use_underline">True</property>
+            <signal name="clicked" handler="on_button1_add_vent_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">33</property>
+            <property name="y">90</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="button1_mod_vent">
+            <property name="label" translatable="yes">_Modificar</property>
+            <property name="width_request">170</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="tooltip_text" translatable="yes">Modificar una venta previamente seleccionada del listado</property>
+            <property name="use_underline">True</property>
+            <signal name="clicked" handler="on_button1_mod_vent_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">33</property>
+            <property name="y">220</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="button1_del_vent">
+            <property name="label" translatable="yes">_Eliminar</property>
+            <property name="width_request">170</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="tooltip_text" translatable="yes">Eliminar una venta previamente seleccionada del listado</property>
+            <property name="use_underline">True</property>
+            <signal name="clicked" handler="on_button1_del_vent_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">33</property>
+            <property name="y">350</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="entry1_busqVent">
+            <property name="width_request">180</property>
+            <property name="height_request">32</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="tooltip_text" translatable="yes">Introduce texto a buscar</property>
+            <property name="invisible_char">●</property>
+            <property name="text" translatable="yes">Introduce tu búsqueda...</property>
+            <property name="invisible_char_set">True</property>
+            <property name="primary_icon_activatable">False</property>
+            <property name="secondary_icon_activatable">False</property>
+            <property name="primary_icon_sensitive">True</property>
+            <property name="secondary_icon_sensitive">True</property>
+          </object>
+          <packing>
+            <property name="x">401</property>
+            <property name="y">25</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="button1_busqVent">
+            <property name="label" translatable="yes">_Buscar por</property>
+            <property name="width_request">100</property>
+            <property name="height_request">35</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="tooltip_text" translatable="yes">Buscar venta.
+Previamente has de escoger un criterio de búsqueda y escribirlo 
+para activar el botón.</property>
+            <property name="use_underline">True</property>
+            <signal name="clicked" handler="on_button1_busqVent_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">610</property>
+            <property name="y">23</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkScrolledWindow" id="scrolledwindow3">
+            <property name="width_request">470</property>
+            <property name="height_request">387</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="tooltip_text" translatable="yes">Listado de ventas.
+Selecciona una venta o haz doble click para poder modificarla o eliminarla.</property>
+            <property name="hscrollbar_policy">automatic</property>
+            <property name="vscrollbar_policy">automatic</property>
+            <child>
+              <object class="GtkTreeView" id="treeview2Vent">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="model">liststore3</property>
+                <property name="headers_clickable">False</property>
+                <property name="search_column">0</property>
+                <signal name="cursor-changed" handler="on_treeview2Vent_cursor_changed" swapped="no"/>
+                <signal name="button-press-event" handler="on_treeview2Vent_button_press_event" swapped="no"/>
+                <signal name="row-activated" handler="on_treeview2Vent_row_activated" swapped="no"/>
+                <child>
+                  <object class="GtkTreeViewColumn" id="treeviewcolumn15">
+                    <property name="min_width">120</property>
+                    <property name="title" translatable="yes">Fecha venta</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkTreeViewColumn" id="treeviewcolumn16">
+                    <property name="min_width">120</property>
+                    <property name="title" translatable="yes">Fecha inicio</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkTreeViewColumn" id="treeviewcolumn17">
+                    <property name="min_width">100</property>
+                    <property name="title" translatable="yes">Fecha fin</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkTreeViewColumn" id="treeviewcolumn18">
+                    <property name="min_width">100</property>
+                    <property name="title" translatable="yes">Cliente</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkTreeViewColumn" id="treeviewcolumn26">
+                    <property name="title" translatable="yes">Paquete</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="x">237</property>
+            <property name="y">89</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkComboBox" id="comboboxVentas">
+            <property name="width_request">138</property>
+            <property name="height_request">32</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="tooltip_text" translatable="yes">Selecciona un criterio de búsqueda</property>
+            <property name="model">liststore6</property>
+            <signal name="changed" handler="on_comboboxVentas_changed" swapped="no"/>
+            <child>
+              <object class="GtkCellRendererText" id="cellrenderertext3"/>
+              <attributes>
+                <attribute name="text">0</attribute>
+              </attributes>
+            </child>
+          </object>
+          <packing>
+            <property name="x">233</property>
+            <property name="y">25</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="aMainDesdeVenta">
+            <property name="width_request">170</property>
+            <property name="height_request">33</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="tooltip_text" translatable="yes">Salir al menú principal</property>
+            <property name="use_underline">True</property>
+            <signal name="clicked" handler="on_aMainDesdeVenta_clicked" swapped="no"/>
+            <child>
+              <object class="GtkImage" id="image6">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="stock">gtk-quit</property>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="x">33</property>
+            <property name="y">441</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkListStore" id="liststore7">
+    <columns>
+      <!-- column-name nombreCli -->
+      <column type="gchararray"/>
+      <!-- column-name apellidosCli -->
+      <column type="gchararray"/>
+      <!-- column-name fechaNacCli -->
+      <column type="gchararray"/>
+      <!-- column-name dniCli -->
+      <column type="gchararray"/>
+      <!-- column-name pasaporteCli -->
+      <column type="gchararray"/>
+      <!-- column-name telefonoCli -->
+      <column type="gchararray"/>
+      <!-- column-name emailCli -->
+      <column type="gchararray"/>
+      <!-- column-name direccionCli -->
+      <column type="gchararray"/>
+      <!-- column-name idCli -->
+      <column type="gchararray"/>
+    </columns>
+  </object>
+  <object class="GtkWindow" id="clientes">
+    <property name="width_request">740</property>
+    <property name="height_request">490</property>
+    <property name="can_focus">False</property>
+    <property name="title" translatable="yes">Gestión de clientes</property>
+    <property name="resizable">False</property>
+    <property name="modal">True</property>
+    <property name="window_position">center-always</property>
+    <property name="icon">icono_app.ico</property>
+    <signal name="destroy" handler="on_clientes_destroy" swapped="no"/>
+    <child>
+      <object class="GtkFixed" id="fixed4">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <object class="GtkLabel" id="label1_titulo_cli">
+            <property name="width_request">221</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="tooltip_text" translatable="yes">Gestión de clientes</property>
+            <property name="ypad">6</property>
+            <property name="label" translatable="yes">CLIENTES</property>
+            <attributes>
+              <attribute name="weight" value="bold"/>
+              <attribute name="foreground" value="#000000000000"/>
+              <attribute name="scale" value="3"/>
+            </attributes>
+          </object>
+        </child>
+        <child>
+          <object class="GtkButton" id="add_cli">
+            <property name="label" translatable="yes">_Añadir</property>
+            <property name="width_request">170</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="tooltip_text" translatable="yes">Añadir un cliente</property>
+            <property name="use_underline">True</property>
+            <signal name="clicked" handler="on_add_cli_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">33</property>
+            <property name="y">90</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="mod_cli">
+            <property name="label" translatable="yes">_Modificar</property>
+            <property name="width_request">170</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="tooltip_text" translatable="yes">Modifica un cliente previamente seleccionado del listado</property>
+            <property name="use_underline">True</property>
+            <signal name="clicked" handler="on_mod_cli_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">33</property>
+            <property name="y">220</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="del_cli">
+            <property name="label" translatable="yes">_Eliminar</property>
+            <property name="width_request">170</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="tooltip_text" translatable="yes">Eliminar un cliente previamente seleccionado del listado</property>
+            <property name="use_underline">True</property>
+            <signal name="clicked" handler="on_del_cli_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">33</property>
+            <property name="y">350</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="entry_busq_cli">
+            <property name="width_request">180</property>
+            <property name="height_request">32</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="tooltip_text" translatable="yes">Introduce texto a buscar</property>
+            <property name="invisible_char">●</property>
+            <property name="text" translatable="yes">Introduce tu búsqueda...</property>
+            <property name="invisible_char_set">True</property>
+            <property name="primary_icon_activatable">False</property>
+            <property name="secondary_icon_activatable">False</property>
+            <property name="primary_icon_sensitive">True</property>
+            <property name="secondary_icon_sensitive">True</property>
+          </object>
+          <packing>
+            <property name="x">401</property>
+            <property name="y">25</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="cli_busca_cli">
+            <property name="label" translatable="yes">_Buscar por</property>
+            <property name="width_request">100</property>
+            <property name="height_request">35</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="tooltip_text" translatable="yes">Buscar cliente.
+Previamente has de escoger un criterio de búsqueda y escribirlo 
+para activar el botón.</property>
+            <property name="use_underline">True</property>
+            <signal name="clicked" handler="on_cli_busca_cli_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">610</property>
+            <property name="y">23</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkScrolledWindow" id="scrolledwindow1">
+            <property name="width_request">470</property>
+            <property name="height_request">387</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="tooltip_text" translatable="yes">Selecciona un cliente o haz doble click para poder modificarlo o eliminarlo</property>
+            <property name="hscrollbar_policy">automatic</property>
+            <property name="vscrollbar_policy">automatic</property>
+            <child>
+              <object class="GtkTreeView" id="treeview1">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="model">liststore7</property>
+                <signal name="cursor-changed" handler="on_treeview1_cursor_changed" swapped="no"/>
+                <signal name="button-press-event" handler="on_treeview1_button_press_event" swapped="no"/>
+                <signal name="row-activated" handler="on_treeview1_row_activated" swapped="no"/>
+                <child>
+                  <object class="GtkTreeViewColumn" id="treeviewcolumn1">
+                    <property name="min_width">60</property>
+                    <property name="title" translatable="yes">Nombre</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkTreeViewColumn" id="treeviewcolumn2">
+                    <property name="min_width">60</property>
+                    <property name="title" translatable="yes">Apellidos</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkTreeViewColumn" id="treeviewcolumn3">
+                    <property name="min_width">50</property>
+                    <property name="title" translatable="yes">F. Nac</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkTreeViewColumn" id="treeviewcolumn4">
+                    <property name="min_width">40</property>
+                    <property name="title" translatable="yes">Dni</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkTreeViewColumn" id="treeviewcolumn5">
+                    <property name="title" translatable="yes">Pasaporte</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkTreeViewColumn" id="treeviewcolumn6">
+                    <property name="min_width">50</property>
+                    <property name="title" translatable="yes">Teléfono</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkTreeViewColumn" id="treeviewcolumn7">
+                    <property name="min_width">60</property>
+                    <property name="title" translatable="yes">Email</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkTreeViewColumn" id="treeviewcolumn8">
+                    <property name="title" translatable="yes">Dirección</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="x">237</property>
+            <property name="y">89</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkComboBox" id="comboboxClientes">
+            <property name="width_request">138</property>
+            <property name="height_request">32</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="tooltip_text" translatable="yes">Selecciona un criterio de búsqueda.</property>
+            <property name="model">liststore4</property>
+            <property name="row_span_column">0</property>
+            <signal name="changed" handler="on_comboboxClientes_changed" swapped="no"/>
+            <child>
+              <object class="GtkCellRendererText" id="cellrenderertext1"/>
+              <attributes>
+                <attribute name="text">0</attribute>
+              </attributes>
+            </child>
+          </object>
+          <packing>
+            <property name="x">233</property>
+            <property name="y">25</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="aMainDesdeCli">
+            <property name="width_request">170</property>
+            <property name="height_request">33</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="tooltip_text" translatable="yes">Cerrar sección clientes</property>
+            <property name="use_underline">True</property>
+            <signal name="clicked" handler="on_aMainDesdeCli_clicked" swapped="no"/>
+            <child>
+              <object class="GtkImage" id="image7">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="stock">gtk-quit</property>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="x">33</property>
+            <property name="y">445</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkListStore" id="liststore8">
+    <columns>
+      <!-- column-name gchararray1 -->
+      <column type="gchararray"/>
+    </columns>
+    <data>
+      <row>
+        <col id="0" translatable="yes">Nombre</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">Apellidos</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">Dni</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">Pasaporte</col>
+      </row>
+    </data>
+  </object>
+  <object class="GtkListStore" id="liststore9">
+    <columns>
+      <!-- column-name gchararray1 -->
+      <column type="gchararray"/>
+    </columns>
+    <data>
+      <row>
+        <col id="0" translatable="yes">Nombre</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">Destino</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">Precio</col>
+      </row>
+    </data>
+  </object>
+  <object class="GtkWindow" id="modificarCliente">
+    <property name="width_request">870</property>
+    <property name="height_request">440</property>
+    <property name="can_focus">False</property>
+    <property name="tooltip_text" translatable="yes">Modificar un cliente seleccionado</property>
+    <property name="title" translatable="yes">Modificar cliente</property>
+    <property name="resizable">False</property>
+    <property name="modal">True</property>
+    <property name="window_position">center-always</property>
+    <property name="icon">icono_app.ico</property>
+    <child>
+      <object class="GtkFixed" id="fixed9">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <object class="GtkLabel" id="label1_titulo_modCli">
+            <property name="width_request">363</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="tooltip_text" translatable="yes">Modificar un cliente seleccionado</property>
+            <property name="ypad">6</property>
+            <property name="label" translatable="yes">MODIFICAR CLIENTE</property>
+            <attributes>
+              <attribute name="weight" value="bold"/>
+              <attribute name="foreground" value="#000000000000"/>
+              <attribute name="scale" value="3"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">18</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="label2AddNom1">
+            <property name="width_request">100</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="tooltip_text" translatable="yes">Nombre del cliente</property>
+            <property name="label" translatable="yes">Nombre:</property>
+            <attributes>
+              <attribute name="scale" value="2"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">23</property>
+            <property name="y">57</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="label2AddApe1">
+            <property name="width_request">111</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="tooltip_text" translatable="yes">Apellidos del cliente</property>
+            <property name="label" translatable="yes">Apellidos:</property>
+            <attributes>
+              <attribute name="scale" value="2"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">25</property>
+            <property name="y">109</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="label2AddDni1">
+            <property name="width_request">100</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="tooltip_text" translatable="yes">Dni del cliente</property>
+            <property name="label" translatable="yes">Dni:</property>
+            <attributes>
+              <attribute name="scale" value="2"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="y">166</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="label2AddPassport1">
+            <property name="width_request">121</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="tooltip_text" translatable="yes">Pasaporte del cliente</property>
+            <property name="label" translatable="yes">Pasaporte:</property>
+            <attributes>
+              <attribute name="scale" value="2"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">25</property>
+            <property name="y">219</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="entry1AddNom1">
+            <property name="width_request">197</property>
+            <property name="height_request">27</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="tooltip_text" translatable="yes">Escriba el nombre aquí</property>
+            <property name="invisible_char">●</property>
+            <property name="invisible_char_set">True</property>
+            <property name="primary_icon_activatable">False</property>
+            <property name="secondary_icon_activatable">False</property>
+            <property name="primary_icon_sensitive">True</property>
+            <property name="secondary_icon_sensitive">True</property>
+          </object>
+          <packing>
+            <property name="x">180</property>
+            <property name="y">86</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="entry2AddApe1">
+            <property name="width_request">197</property>
+            <property name="height_request">27</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="tooltip_text" translatable="yes">Escribe el apellido aquí</property>
+            <property name="invisible_char">●</property>
+            <property name="invisible_char_set">True</property>
+            <property name="primary_icon_activatable">False</property>
+            <property name="secondary_icon_activatable">False</property>
+            <property name="primary_icon_sensitive">True</property>
+            <property name="secondary_icon_sensitive">True</property>
+          </object>
+          <packing>
+            <property name="x">180</property>
+            <property name="y">140</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="entry1AddDni1">
+            <property name="width_request">197</property>
+            <property name="height_request">27</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="tooltip_text" translatable="yes">Escribe el dni aquí</property>
+            <property name="invisible_char">●</property>
+            <property name="invisible_char_set">True</property>
+            <property name="primary_icon_activatable">False</property>
+            <property name="secondary_icon_activatable">False</property>
+            <property name="primary_icon_sensitive">True</property>
+            <property name="secondary_icon_sensitive">True</property>
+          </object>
+          <packing>
+            <property name="x">180</property>
+            <property name="y">194</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="entry2AddPassport1">
+            <property name="width_request">197</property>
+            <property name="height_request">27</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="tooltip_text" translatable="yes">escribe el pasaporte aquí</property>
+            <property name="invisible_char">●</property>
+            <property name="invisible_char_set">True</property>
+            <property name="primary_icon_activatable">False</property>
+            <property name="secondary_icon_activatable">False</property>
+            <property name="primary_icon_sensitive">True</property>
+            <property name="secondary_icon_sensitive">True</property>
+          </object>
+          <packing>
+            <property name="x">180</property>
+            <property name="y">247</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="label2AddTel1">
+            <property name="width_request">120</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="tooltip_text" translatable="yes">Teléfono del cliente</property>
+            <property name="label" translatable="yes">Teléfono:</property>
+            <attributes>
+              <attribute name="scale" value="2"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">395</property>
+            <property name="y">57</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="entry1AddTel2">
+            <property name="width_request">197</property>
+            <property name="height_request">27</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="tooltip_text" translatable="yes">Escribe el teléfono aquí</property>
+            <property name="invisible_char">●</property>
+            <property name="invisible_char_set">True</property>
+            <property name="primary_icon_activatable">False</property>
+            <property name="secondary_icon_activatable">False</property>
+            <property name="primary_icon_sensitive">True</property>
+            <property name="secondary_icon_sensitive">True</property>
+          </object>
+          <packing>
+            <property name="x">645</property>
+            <property name="y">86</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="label2AddEmail1">
+            <property name="width_request">100</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="tooltip_text" translatable="yes">correo del cliente</property>
+            <property name="label" translatable="yes">Email:</property>
+            <attributes>
+              <attribute name="scale" value="2"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">387</property>
+            <property name="y">112</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="entry1AddTel3">
+            <property name="width_request">197</property>
+            <property name="height_request">27</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="tooltip_text" translatable="yes">escribe el correo aquí</property>
+            <property name="invisible_char">●</property>
+            <property name="invisible_char_set">True</property>
+            <property name="primary_icon_activatable">False</property>
+            <property name="secondary_icon_activatable">False</property>
+            <property name="primary_icon_sensitive">True</property>
+            <property name="secondary_icon_sensitive">True</property>
+          </object>
+          <packing>
+            <property name="x">645</property>
+            <property name="y">140</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="label2AddFNac2">
+            <property name="width_request">197</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="tooltip_text" translatable="yes">Fecha de nacimiento del cliente</property>
+            <property name="label" translatable="yes">Fecha nacimiento:</property>
+            <attributes>
+              <attribute name="scale" value="2"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">405</property>
+            <property name="y">166</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="entry1AddFNac3">
+            <property name="width_request">197</property>
+            <property name="height_request">27</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="tooltip_text" translatable="yes">Escriba la fecha aquí (dd/mm/aaaa)</property>
+            <property name="invisible_char">●</property>
+            <property name="text" translatable="yes">dd/mm/aaaa</property>
+            <property name="invisible_char_set">True</property>
+            <property name="primary_icon_activatable">False</property>
+            <property name="secondary_icon_activatable">False</property>
+            <property name="primary_icon_sensitive">True</property>
+            <property name="secondary_icon_sensitive">True</property>
+          </object>
+          <packing>
+            <property name="x">645</property>
+            <property name="y">194</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkVSeparator" id="vseparator3">
+            <property name="width_request">100</property>
+            <property name="height_request">203</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+          </object>
+          <packing>
+            <property name="x">343</property>
+            <property name="y">78</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="label2AddFDir1">
+            <property name="width_request">120</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="tooltip_text" translatable="yes">Dirección del cliente</property>
+            <property name="label" translatable="yes">Dirección: </property>
+            <attributes>
+              <attribute name="scale" value="2"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">404</property>
+            <property name="y">218</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="entry1AddFNac4">
+            <property name="width_request">197</property>
+            <property name="height_request">27</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="tooltip_text" translatable="yes">Escribe la dirección aquí</property>
+            <property name="invisible_char">●</property>
+            <property name="invisible_char_set">True</property>
+            <property name="primary_icon_activatable">False</property>
+            <property name="secondary_icon_activatable">False</property>
+            <property name="primary_icon_sensitive">True</property>
+            <property name="secondary_icon_sensitive">True</property>
+          </object>
+          <packing>
+            <property name="x">645</property>
+            <property name="y">248</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="button4SaveNewCli2">
+            <property name="label" translatable="yes">Guardar</property>
+            <property name="width_request">200</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="tooltip_text" translatable="yes">Guardar cambios del cliente</property>
+          </object>
+          <packing>
+            <property name="x">644</property>
+            <property name="y">331</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="button4CancelNewCli2">
+            <property name="label" translatable="yes">Cancelar</property>
+            <property name="width_request">200</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="tooltip_text" translatable="yes">Cancelar cambios</property>
+          </object>
+          <packing>
+            <property name="x">415</property>
+            <property name="y">331</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkWindow" id="nuevaVenta">
+    <property name="width_request">830</property>
+    <property name="height_request">430</property>
+    <property name="can_focus">False</property>
+    <property name="title" translatable="yes">Nueva venta</property>
+    <property name="resizable">False</property>
+    <property name="modal">True</property>
+    <property name="window_position">center-always</property>
+    <property name="icon">icono_app.ico</property>
+    <signal name="destroy" handler="on_nuevaVenta_destroy" swapped="no"/>
+    <child>
+      <object class="GtkFixed" id="fixed10">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <object class="GtkLabel" id="label_nueva_venta">
+            <property name="width_request">400</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="ypad">6</property>
+            <property name="label" translatable="yes">NUEVA VENTA</property>
+            <attributes>
+              <attribute name="weight" value="bold"/>
+              <attribute name="foreground" value="#000000000000"/>
+              <attribute name="scale" value="3"/>
+            </attributes>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel" id="cli_new_venta">
+            <property name="width_request">100</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="tooltip_text" translatable="yes">Cliente al que realiza la venta</property>
+            <property name="label" translatable="yes">Cliente:</property>
+            <attributes>
+              <attribute name="scale" value="2"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">30</property>
+            <property name="y">57</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="paq_new_venta">
+            <property name="width_request">100</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="tooltip_text" translatable="yes">Paquete elegido para el cliente</property>
+            <property name="label" translatable="yes">Paquete:</property>
+            <attributes>
+              <attribute name="scale" value="2"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">36</property>
+            <property name="y">110</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="fe_ini_new_venta">
+            <property name="width_request">150</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="tooltip_text" translatable="yes">Fecha de inicio del viaje</property>
+            <property name="label" translatable="yes">Fecha inicio:</property>
+            <attributes>
+              <attribute name="scale" value="2"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">31</property>
+            <property name="y">164</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="fe_fin_new_venta">
+            <property name="width_request">150</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="tooltip_text" translatable="yes">Fecha de finalización del viaje</property>
+            <property name="label" translatable="yes">Fecha fin:</property>
+            <attributes>
+              <attribute name="scale" value="2"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">16</property>
+            <property name="y">219</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="sel_cli_new_venta">
+            <property name="width_request">292</property>
+            <property name="height_request">27</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="tooltip_text" translatable="yes">Pulsa en buscar para seleccionar un cliente</property>
+            <property name="editable">False</property>
+            <property name="invisible_char">●</property>
+            <property name="text" translatable="yes">Selecciona un cliente...</property>
+            <property name="primary_icon_activatable">False</property>
+            <property name="secondary_icon_activatable">False</property>
+            <property name="primary_icon_sensitive">True</property>
+            <property name="secondary_icon_sensitive">True</property>
+          </object>
+          <packing>
+            <property name="x">190</property>
+            <property name="y">85</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="busq_cli_new_venta">
+            <property name="label" translatable="yes">Buscar</property>
+            <property name="width_request">60</property>
+            <property name="height_request">29</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="tooltip_text" translatable="yes">Pulse para buscar el cliente</property>
+            <signal name="clicked" handler="on_busq_cli_new_venta_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">480</property>
+            <property name="y">84</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="sel_paq_new_venta">
+            <property name="width_request">292</property>
+            <property name="height_request">27</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="tooltip_text" translatable="yes">Pulsa en buscar para seleccionar un paquete</property>
+            <property name="editable">False</property>
+            <property name="invisible_char">●</property>
+            <property name="text" translatable="yes">Selecciona un paquete...</property>
+            <property name="primary_icon_activatable">False</property>
+            <property name="secondary_icon_activatable">False</property>
+            <property name="primary_icon_sensitive">True</property>
+            <property name="secondary_icon_sensitive">True</property>
+          </object>
+          <packing>
+            <property name="x">190</property>
+            <property name="y">139</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="busq_paq_new_venta">
+            <property name="label" translatable="yes">Buscar</property>
+            <property name="width_request">60</property>
+            <property name="height_request">29</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="tooltip_text" translatable="yes">Pulsa para buscar un paquete</property>
+            <signal name="clicked" handler="on_busq_paq_new_venta_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">480</property>
+            <property name="y">138</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="abre_cal_ini_new_venta">
+            <property name="label" translatable="yes">Seleccionar fecha</property>
+            <property name="width_request">120</property>
+            <property name="height_request">29</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="tooltip_text" translatable="yes">Pulse para abri el calendario</property>
+            <signal name="clicked" handler="on_abre_cal_ini_new_venta_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">480</property>
+            <property name="y">192</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="abre_cal_fin_new_venta">
+            <property name="label" translatable="yes">Seleccionar fecha</property>
+            <property name="width_request">120</property>
+            <property name="height_request">29</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="tooltip_text" translatable="yes">Pulse para abrir el calendario</property>
+            <signal name="clicked" handler="on_abre_cal_fin_new_venta_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">480</property>
+            <property name="y">245</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="cancel_new_venta">
+            <property name="label" translatable="yes">Cancelar</property>
+            <property name="width_request">200</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="tooltip_text" translatable="yes">Cancelar la venta</property>
+            <signal name="clicked" handler="on_cancel_new_venta_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">105</property>
+            <property name="y">325</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="guarda_new_venta">
+            <property name="label" translatable="yes">Guardar</property>
+            <property name="width_request">200</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="tooltip_text" translatable="yes">Guardar la venta</property>
+            <signal name="clicked" handler="on_guarda_new_venta_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">590</property>
+            <property name="y">325</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="selec_fe_ini_new_venta">
+            <property name="width_request">292</property>
+            <property name="height_request">27</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="tooltip_text" translatable="yes">Pulsa en seleccionar para escoger una fecha</property>
+            <property name="editable">False</property>
+            <property name="invisible_char">●</property>
+            <property name="text" translatable="yes">Selecciona fecha...</property>
+            <property name="primary_icon_activatable">False</property>
+            <property name="secondary_icon_activatable">False</property>
+            <property name="primary_icon_sensitive">True</property>
+            <property name="secondary_icon_sensitive">True</property>
+          </object>
+          <packing>
+            <property name="x">190</property>
+            <property name="y">193</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="selec_fe_fin_new_venta">
+            <property name="width_request">292</property>
+            <property name="height_request">27</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="tooltip_text" translatable="yes">pulsa en seleccionar para escoger una fecha</property>
+            <property name="editable">False</property>
+            <property name="invisible_char">●</property>
+            <property name="text" translatable="yes">Selecciona fecha...</property>
+            <property name="primary_icon_activatable">False</property>
+            <property name="secondary_icon_activatable">False</property>
+            <property name="primary_icon_sensitive">True</property>
+            <property name="secondary_icon_sensitive">True</property>
+          </object>
+          <packing>
+            <property name="x">190</property>
+            <property name="y">246</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="modificaVentaBtn">
+            <property name="label" translatable="yes">Modificar</property>
+            <property name="width_request">200</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="tooltip_text" translatable="yes">Modificar la venta</property>
+            <signal name="clicked" handler="on_modificaVentaBtn_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">350</property>
+            <property name="y">325</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="idVentaForm">
+            <property name="width_request">32</property>
+            <property name="height_request">32</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="tooltip_text" translatable="yes">ID de la venta</property>
+            <property name="editable">False</property>
+            <property name="invisible_char">●</property>
+            <property name="invisible_char_set">True</property>
+            <property name="primary_icon_activatable">False</property>
+            <property name="secondary_icon_activatable">False</property>
+            <property name="primary_icon_sensitive">True</property>
+            <property name="secondary_icon_sensitive">True</property>
+          </object>
+          <packing>
+            <property name="x">41</property>
+            <property name="y">348</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="idFormClienteVenta">
+            <property name="width_request">32</property>
+            <property name="height_request">32</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="tooltip_text" translatable="yes">ID cliente</property>
+            <property name="editable">False</property>
+            <property name="invisible_char">●</property>
+            <property name="invisible_char_set">True</property>
+            <property name="primary_icon_activatable">False</property>
+            <property name="secondary_icon_activatable">False</property>
+            <property name="primary_icon_sensitive">True</property>
+            <property name="secondary_icon_sensitive">True</property>
+          </object>
+          <packing>
+            <property name="x">587</property>
+            <property name="y">82</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="idFormPaquetesVenta">
+            <property name="width_request">32</property>
+            <property name="height_request">32</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="tooltip_text" translatable="yes">ID paquete</property>
+            <property name="editable">False</property>
+            <property name="invisible_char">●</property>
+            <property name="invisible_char_set">True</property>
+            <property name="primary_icon_activatable">False</property>
+            <property name="secondary_icon_activatable">False</property>
+            <property name="primary_icon_sensitive">True</property>
+            <property name="secondary_icon_sensitive">True</property>
+          </object>
+          <packing>
+            <property name="x">588</property>
+            <property name="y">137</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkWindow" id="nuevoCliente">
+    <property name="width_request">870</property>
+    <property name="height_request">440</property>
+    <property name="can_focus">False</property>
+    <property name="title" translatable="yes">Nuevo cliente</property>
+    <property name="resizable">False</property>
+    <property name="modal">True</property>
+    <property name="window_position">center-always</property>
+    <property name="icon">icono_app.ico</property>
+    <signal name="destroy" handler="on_nuevoCliente_destroy" swapped="no"/>
+    <child>
+      <object class="GtkFixed" id="fixed7">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <object class="GtkLabel" id="label1_titulo_newcli1">
+            <property name="width_request">400</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="ypad">6</property>
+            <property name="label" translatable="yes">NUEVO CLIENTE</property>
+            <attributes>
+              <attribute name="weight" value="bold"/>
+              <attribute name="foreground" value="#000000000000"/>
+              <attribute name="scale" value="3"/>
+            </attributes>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel" id="label2AddNom">
+            <property name="width_request">100</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="tooltip_text" translatable="yes">Nombre del cliente</property>
+            <property name="label" translatable="yes">Nombre:</property>
+            <attributes>
+              <attribute name="scale" value="2"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">23</property>
+            <property name="y">57</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="label2AddApe">
+            <property name="width_request">111</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="tooltip_text" translatable="yes">Apellidos del cliente</property>
+            <property name="label" translatable="yes">Apellidos:</property>
+            <attributes>
+              <attribute name="scale" value="2"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">25</property>
+            <property name="y">109</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="label2AddDni">
+            <property name="width_request">100</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="tooltip_text" translatable="yes">Dni del cliente</property>
+            <property name="label" translatable="yes">Dni:</property>
+            <attributes>
+              <attribute name="scale" value="2"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="y">166</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="label2AddPassport">
+            <property name="width_request">121</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="tooltip_text" translatable="yes">Pasaporte del cliente</property>
+            <property name="label" translatable="yes">Pasaporte:</property>
+            <attributes>
+              <attribute name="scale" value="2"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">25</property>
+            <property name="y">219</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="entry1AddNom">
+            <property name="width_request">197</property>
+            <property name="height_request">27</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="tooltip_text" translatable="yes">Escribe aquí el nombre</property>
+            <property name="invisible_char">●</property>
+            <property name="primary_icon_activatable">False</property>
+            <property name="secondary_icon_activatable">False</property>
+            <property name="primary_icon_sensitive">True</property>
+            <property name="secondary_icon_sensitive">True</property>
+          </object>
+          <packing>
+            <property name="x">180</property>
+            <property name="y">86</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="entry2AddApe">
+            <property name="width_request">197</property>
+            <property name="height_request">27</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="tooltip_text" translatable="yes">Escribe aquí los apellidos</property>
+            <property name="invisible_char">●</property>
+            <property name="invisible_char_set">True</property>
+            <property name="primary_icon_activatable">False</property>
+            <property name="secondary_icon_activatable">False</property>
+            <property name="primary_icon_sensitive">True</property>
+            <property name="secondary_icon_sensitive">True</property>
+          </object>
+          <packing>
+            <property name="x">180</property>
+            <property name="y">140</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="entry1AddDni">
+            <property name="width_request">197</property>
+            <property name="height_request">27</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="tooltip_text" translatable="yes">Escriba aquí el dni</property>
+            <property name="invisible_char">●</property>
+            <property name="primary_icon_activatable">False</property>
+            <property name="secondary_icon_activatable">False</property>
+            <property name="primary_icon_sensitive">True</property>
+            <property name="secondary_icon_sensitive">True</property>
+          </object>
+          <packing>
+            <property name="x">180</property>
+            <property name="y">194</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="entry2AddPassport">
+            <property name="width_request">197</property>
+            <property name="height_request">27</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="tooltip_text" translatable="yes">Escribe aquí el pasaporte, si no tiene es válido escribir "No tiene"</property>
+            <property name="invisible_char">●</property>
+            <property name="primary_icon_activatable">False</property>
+            <property name="secondary_icon_activatable">False</property>
+            <property name="primary_icon_sensitive">True</property>
+            <property name="secondary_icon_sensitive">True</property>
+          </object>
+          <packing>
+            <property name="x">180</property>
+            <property name="y">247</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="label2AddTel">
+            <property name="width_request">120</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="tooltip_text" translatable="yes">Teléfono del cliente</property>
+            <property name="label" translatable="yes">Teléfono:</property>
+            <attributes>
+              <attribute name="scale" value="2"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">395</property>
+            <property name="y">57</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="entry1AddTel">
+            <property name="width_request">197</property>
+            <property name="height_request">27</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="tooltip_text" translatable="yes">Escribe aquí el teléfono</property>
+            <property name="invisible_char">●</property>
+            <property name="invisible_char_set">True</property>
+            <property name="primary_icon_activatable">False</property>
+            <property name="secondary_icon_activatable">False</property>
+            <property name="primary_icon_sensitive">True</property>
+            <property name="secondary_icon_sensitive">True</property>
+          </object>
+          <packing>
+            <property name="x">645</property>
+            <property name="y">86</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="label2AddEmail">
+            <property name="width_request">100</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="tooltip_text" translatable="yes">Email del cliente</property>
+            <property name="label" translatable="yes">Email:</property>
+            <attributes>
+              <attribute name="scale" value="2"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">387</property>
+            <property name="y">112</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="entry1AddEmail">
+            <property name="width_request">197</property>
+            <property name="height_request">27</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="tooltip_text" translatable="yes">Escribe aquí el correo</property>
+            <property name="invisible_char">●</property>
+            <property name="invisible_char_set">True</property>
+            <property name="primary_icon_activatable">False</property>
+            <property name="secondary_icon_activatable">False</property>
+            <property name="primary_icon_sensitive">True</property>
+            <property name="secondary_icon_sensitive">True</property>
+          </object>
+          <packing>
+            <property name="x">645</property>
+            <property name="y">140</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="label2AddFNac">
+            <property name="width_request">197</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="tooltip_text" translatable="yes">Fecha de nacimiento del cliente</property>
+            <property name="label" translatable="yes">Fecha nacimiento:</property>
+            <attributes>
+              <attribute name="scale" value="2"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">405</property>
+            <property name="y">166</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkVSeparator" id="vseparator1">
+            <property name="width_request">100</property>
+            <property name="height_request">203</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+          </object>
+          <packing>
+            <property name="x">343</property>
+            <property name="y">78</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="label2AddFDir">
+            <property name="width_request">120</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="tooltip_text" translatable="yes">Dirección del cliente</property>
+            <property name="label" translatable="yes">Dirección: </property>
+            <attributes>
+              <attribute name="scale" value="2"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">404</property>
+            <property name="y">218</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="entry1AddDirecion">
+            <property name="width_request">197</property>
+            <property name="height_request">27</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="tooltip_text" translatable="yes">Escribe la dirección aquí</property>
+            <property name="invisible_char">●</property>
+            <property name="invisible_char_set">True</property>
+            <property name="primary_icon_activatable">False</property>
+            <property name="secondary_icon_activatable">False</property>
+            <property name="primary_icon_sensitive">True</property>
+            <property name="secondary_icon_sensitive">True</property>
+          </object>
+          <packing>
+            <property name="x">645</property>
+            <property name="y">248</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="SaveNewCli">
+            <property name="label" translatable="yes">Guardar</property>
+            <property name="width_request">200</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="tooltip_text" translatable="yes">Guardar el cliente</property>
+            <signal name="clicked" handler="on_SaveNewCli_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">644</property>
+            <property name="y">331</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="CancelNewCli">
+            <property name="label" translatable="yes">Cancelar</property>
+            <property name="width_request">200</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="tooltip_text" translatable="yes">Cancelar creación de cliente</property>
+            <signal name="clicked" handler="on_CancelNewCli_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">185</property>
+            <property name="y">331</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="entry1AddFNac">
+            <property name="width_request">100</property>
+            <property name="height_request">27</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="tooltip_text" translatable="yes">pulsa en "coger fecha" para seleccionar una fecha de nacimiento</property>
+            <property name="editable">False</property>
+            <property name="invisible_char">●</property>
+            <property name="xalign">0.0099999997764825821</property>
+            <property name="invisible_char_set">True</property>
+            <property name="primary_icon_activatable">False</property>
+            <property name="secondary_icon_activatable">False</property>
+            <property name="primary_icon_sensitive">True</property>
+            <property name="secondary_icon_sensitive">True</property>
+          </object>
+          <packing>
+            <property name="x">645</property>
+            <property name="y">194</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="ModNewCli">
+            <property name="label" translatable="yes">Modificar</property>
+            <property name="width_request">200</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="tooltip_text" translatable="yes">Cancelar creación de cliente</property>
+            <signal name="clicked" handler="on_ModNewCli_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">415</property>
+            <property name="y">331</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="entry2AddIdCli">
+            <property name="width_request">32</property>
+            <property name="height_request">31</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="tooltip_text" translatable="yes">Escribe aquí el pasaporte</property>
+            <property name="editable">False</property>
+            <property name="invisible_char">●</property>
+            <property name="invisible_char_set">True</property>
+            <property name="primary_icon_activatable">False</property>
+            <property name="secondary_icon_activatable">False</property>
+            <property name="primary_icon_sensitive">True</property>
+            <property name="secondary_icon_sensitive">True</property>
+          </object>
+          <packing>
+            <property name="x">75</property>
+            <property name="y">355</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="cogeFechaNewCli">
+            <property name="label" translatable="yes">Coger fecha</property>
+            <property name="width_request">100</property>
+            <property name="height_request">29</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="tooltip_text" translatable="yes">Abre un calendario para seleccionar una fecha de nacimiento</property>
+            <signal name="clicked" handler="on_cogeFechaNewCli_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">743</property>
+            <property name="y">193</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkWindow" id="nuevoPaquete">
+    <property name="width_request">875</property>
+    <property name="height_request">400</property>
+    <property name="can_focus">False</property>
+    <property name="title" translatable="yes">Nuevo paquete</property>
+    <property name="resizable">False</property>
+    <property name="modal">True</property>
+    <property name="window_position">center-always</property>
+    <property name="icon">icono_app.ico</property>
+    <signal name="destroy" handler="on_nuevoPaquete_destroy" swapped="no"/>
+    <child>
+      <object class="GtkFixed" id="fixed8">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <object class="GtkLabel" id="label1_titulo_newPaq">
+            <property name="width_request">411</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="ypad">6</property>
+            <property name="label" translatable="yes">NUEVO PAQUETE</property>
+            <attributes>
+              <attribute name="weight" value="bold"/>
+              <attribute name="foreground" value="#000000000000"/>
+              <attribute name="scale" value="3"/>
+            </attributes>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel" id="label2AddNomPaq">
+            <property name="width_request">100</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="tooltip_text" translatable="yes">Nombre del paquete</property>
+            <property name="label" translatable="yes">Nombre:</property>
+            <attributes>
+              <attribute name="scale" value="2"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">23</property>
+            <property name="y">57</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="label2AddPrecioPaq">
+            <property name="width_request">111</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="tooltip_text" translatable="yes">Precio del paquete</property>
+            <property name="label" translatable="yes">Precio:</property>
+            <attributes>
+              <attribute name="scale" value="2"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">9</property>
+            <property name="y">109</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="label2Destino">
+            <property name="width_request">100</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="tooltip_text" translatable="yes">Destino del paquete</property>
+            <property name="label" translatable="yes">Destino:</property>
+            <attributes>
+              <attribute name="scale" value="2"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">24</property>
+            <property name="y">166</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="entry1AddNomPaq">
+            <property name="width_request">197</property>
+            <property name="height_request">27</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="tooltip_text" translatable="yes">Escribe el nombre aquí</property>
+            <property name="invisible_char">●</property>
+            <property name="invisible_char_set">True</property>
+            <property name="primary_icon_activatable">False</property>
+            <property name="secondary_icon_activatable">False</property>
+            <property name="primary_icon_sensitive">True</property>
+            <property name="secondary_icon_sensitive">True</property>
+          </object>
+          <packing>
+            <property name="x">180</property>
+            <property name="y">86</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="entry2precioPaq">
+            <property name="width_request">197</property>
+            <property name="height_request">27</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="tooltip_text" translatable="yes">Escribe el precio aquí</property>
+            <property name="invisible_char">●</property>
+            <property name="invisible_char_set">True</property>
+            <property name="primary_icon_activatable">False</property>
+            <property name="secondary_icon_activatable">False</property>
+            <property name="primary_icon_sensitive">True</property>
+            <property name="secondary_icon_sensitive">True</property>
+          </object>
+          <packing>
+            <property name="x">180</property>
+            <property name="y">140</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="entry1Destino">
+            <property name="width_request">197</property>
+            <property name="height_request">27</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="tooltip_text" translatable="yes">Escribe el destino aquí</property>
+            <property name="invisible_char">●</property>
+            <property name="invisible_char_set">True</property>
+            <property name="primary_icon_activatable">False</property>
+            <property name="secondary_icon_activatable">False</property>
+            <property name="primary_icon_sensitive">True</property>
+            <property name="secondary_icon_sensitive">True</property>
+          </object>
+          <packing>
+            <property name="x">180</property>
+            <property name="y">194</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="label2AddDurPaq">
+            <property name="width_request">120</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="tooltip_text" translatable="yes">Duración del paquete vacacional</property>
+            <property name="label" translatable="yes">Duración:</property>
+            <attributes>
+              <attribute name="scale" value="2"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">399</property>
+            <property name="y">57</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="entry1AddDurPaq">
+            <property name="width_request">197</property>
+            <property name="height_request">27</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="tooltip_text" translatable="yes">Escribe la duración del paquete(1 semana, 3 días...)</property>
+            <property name="invisible_char">●</property>
+            <property name="invisible_char_set">True</property>
+            <property name="primary_icon_activatable">False</property>
+            <property name="secondary_icon_activatable">False</property>
+            <property name="primary_icon_sensitive">True</property>
+            <property name="secondary_icon_sensitive">True</property>
+          </object>
+          <packing>
+            <property name="x">645</property>
+            <property name="y">86</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="label2HostPaq">
+            <property name="width_request">130</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="tooltip_text" translatable="yes">Hospedaje del paquete</property>
+            <property name="label" translatable="yes">Hospedaje:</property>
+            <attributes>
+              <attribute name="scale" value="2"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">402</property>
+            <property name="y">112</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="entry1hostPaq">
+            <property name="width_request">197</property>
+            <property name="height_request">27</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="tooltip_text" translatable="yes">Escribe si el paquete incluye hospedaje y de que tipo</property>
+            <property name="invisible_char">●</property>
+            <property name="invisible_char_set">True</property>
+            <property name="primary_icon_activatable">False</property>
+            <property name="secondary_icon_activatable">False</property>
+            <property name="primary_icon_sensitive">True</property>
+            <property name="secondary_icon_sensitive">True</property>
+          </object>
+          <packing>
+            <property name="x">645</property>
+            <property name="y">140</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="label2AddMedTrans">
+            <property name="width_request">197</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="tooltip_text" translatable="yes">Medio de transporte del paquete</property>
+            <property name="label" translatable="yes">Medio transporte:</property>
+            <attributes>
+              <attribute name="scale" value="2"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">405</property>
+            <property name="y">166</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkVSeparator" id="vseparator2">
+            <property name="width_request">100</property>
+            <property name="height_request">166</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+          </object>
+          <packing>
+            <property name="x">343</property>
+            <property name="y">71</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="button4SaveNewCli1">
+            <property name="label" translatable="yes">Guardar</property>
+            <property name="width_request">200</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="tooltip_text" translatable="yes">Guardar el nuevo paquete vacacional</property>
+            <signal name="clicked" handler="on_button4SaveNewCli1_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">644</property>
+            <property name="y">290</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="button4CancelNewCli1">
+            <property name="label" translatable="yes">Cancelar</property>
+            <property name="width_request">200</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="tooltip_text" translatable="yes">Cancelar creación del paquete vacacional	</property>
+            <signal name="clicked" handler="on_button4CancelNewCli1_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">185</property>
+            <property name="y">290</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="entry1medtrans">
+            <property name="width_request">197</property>
+            <property name="height_request">27</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="tooltip_text" translatable="yes">Escribe aquí si el paquete incluye el medio de transporte y de que tipo</property>
+            <property name="invisible_char">●</property>
+            <property name="invisible_char_set">True</property>
+            <property name="primary_icon_activatable">False</property>
+            <property name="secondary_icon_activatable">False</property>
+            <property name="primary_icon_sensitive">True</property>
+            <property name="secondary_icon_sensitive">True</property>
+          </object>
+          <packing>
+            <property name="x">645</property>
+            <property name="y">194</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="entryAddIdPaq">
+            <property name="width_request">32</property>
+            <property name="height_request">32</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="tooltip_text" translatable="yes">id del paquete</property>
+            <property name="editable">False</property>
+            <property name="invisible_char">●</property>
+            <property name="invisible_char_set">True</property>
+            <property name="primary_icon_activatable">False</property>
+            <property name="secondary_icon_activatable">False</property>
+            <property name="primary_icon_sensitive">True</property>
+            <property name="secondary_icon_sensitive">True</property>
+          </object>
+          <packing>
+            <property name="x">75</property>
+            <property name="y">312</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="buttonModPaqForm">
+            <property name="label" translatable="yes">Modificar</property>
+            <property name="width_request">200</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="tooltip_text" translatable="yes">Modificar paquete vacacional	</property>
+            <signal name="clicked" handler="on_buttonModPaqForm_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">415</property>
+            <property name="y">290</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkMessageDialog" id="reinicioVentana">
+    <property name="can_focus">False</property>
+    <property name="tooltip_text" translatable="yes">Información acerca del reinicio de BD</property>
+    <property name="border_width">5</property>
+    <property name="title" translatable="yes">Reinicio de BD</property>
+    <property name="window_position">center</property>
+    <property name="icon">icono_app.ico</property>
+    <property name="type_hint">dialog</property>
+    <property name="skip_taskbar_hint">True</property>
+    <property name="buttons">close</property>
+    <property name="text" translatable="yes">Se ha reiniciado la base de datos </property>
+    <child internal-child="vbox">
+      <object class="GtkVBox" id="dialog-vbox12">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="spacing">2</property>
+        <child internal-child="action_area">
+          <object class="GtkHButtonBox" id="dialog-action_area12">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="layout_style">end</property>
+            <child>
+              <placeholder/>
+            </child>
+            <child>
+              <placeholder/>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkListStore" id="tabla_bus_cli_new_venta">
+    <columns>
+      <!-- column-name nomCliVenta -->
+      <column type="gchararray"/>
+      <!-- column-name apeCliVenta -->
+      <column type="gchararray"/>
+      <!-- column-name dniCliVenta -->
+      <column type="gchararray"/>
+      <!-- column-name pasaCliVenta -->
+      <column type="gchararray"/>
+      <!-- column-name idCliVenta -->
+      <column type="gchararray"/>
+    </columns>
+  </object>
+  <object class="GtkWindow" id="buscaClienteVenta">
+    <property name="width_request">492</property>
+    <property name="height_request">640</property>
+    <property name="can_focus">False</property>
+    <property name="title" translatable="yes">Nueva venta - Búsqueda de cliente</property>
+    <property name="resizable">False</property>
+    <property name="modal">True</property>
+    <property name="window_position">center-always</property>
+    <property name="icon">icono_app.ico</property>
+    <signal name="destroy" handler="on_buscaClienteVenta_destroy" swapped="no"/>
+    <child>
+      <object class="GtkFixed" id="fixed11">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <object class="GtkLabel" id="busca_cli_new_venta">
+            <property name="width_request">420</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="tooltip_text" translatable="yes">Búsqueda y selección de cliente para venta</property>
+            <property name="ypad">6</property>
+            <property name="label" translatable="yes">BÚSQUEDA DE CLIENTE</property>
+            <attributes>
+              <attribute name="weight" value="bold"/>
+              <attribute name="foreground" value="#000000000000"/>
+              <attribute name="scale" value="3"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">13</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="term_busca_cli_new_venta">
+            <property name="width_request">429</property>
+            <property name="height_request">27</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="tooltip_text" translatable="yes">Escribe un término de búsqueda</property>
+            <property name="invisible_char">●</property>
+            <property name="text" translatable="yes">Introduzca término de búsqueda...</property>
+            <property name="primary_icon_activatable">False</property>
+            <property name="secondary_icon_activatable">False</property>
+            <property name="primary_icon_sensitive">True</property>
+            <property name="secondary_icon_sensitive">True</property>
+          </object>
+          <packing>
+            <property name="x">30</property>
+            <property name="y">160</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="btn_busq_cli_new_venta">
+            <property name="label" translatable="yes">Buscar</property>
+            <property name="width_request">100</property>
+            <property name="height_request">29</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="tooltip_text" translatable="yes">Pulse para buscar cliente</property>
+            <signal name="clicked" handler="on_btn_busq_cli_new_venta_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">195</property>
+            <property name="y">220</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkScrolledWindow" id="scrolledwindow4">
+            <property name="width_request">429</property>
+            <property name="height_request">200</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="hscrollbar_policy">automatic</property>
+            <property name="vscrollbar_policy">automatic</property>
+            <child>
+              <object class="GtkTreeView" id="treeview3">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="tooltip_text" translatable="yes">Resultados de la búsqueda</property>
+                <property name="model">tabla_bus_cli_new_venta</property>
+                <signal name="cursor-changed" handler="on_treeview3_cursor_changed" swapped="no"/>
+                <signal name="row-activated" handler="on_treeview3_row_activated" swapped="no"/>
+                <child>
+                  <object class="GtkTreeViewColumn" id="treeviewcolumn19">
+                    <property name="min_width">70</property>
+                    <property name="title" translatable="yes">Nombre</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkTreeViewColumn" id="treeviewcolumn20">
+                    <property name="min_width">70</property>
+                    <property name="title" translatable="yes">Apellidos</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkTreeViewColumn" id="treeviewcolumn21">
+                    <property name="min_width">70</property>
+                    <property name="title" translatable="yes">Dni</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkTreeViewColumn" id="treeviewcolumn22">
+                    <property name="min_width">70</property>
+                    <property name="title" translatable="yes">Pasaporte</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="x">30</property>
+            <property name="y">284</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="cancel_busc_cli_new_venta">
+            <property name="label" translatable="yes">Cancelar</property>
+            <property name="width_request">200</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="tooltip_text" translatable="yes">Cancelar la búsqueda del cliente</property>
+            <signal name="clicked" handler="on_cancel_busc_cli_new_venta_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">30</property>
+            <property name="y">530</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="save_busc_cli_new_venta">
+            <property name="label" translatable="yes">Aceptar</property>
+            <property name="width_request">200</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="tooltip_text" translatable="yes">Aceptar y seleccionar el cliente</property>
+            <signal name="clicked" handler="on_save_busc_cli_new_venta_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">260</property>
+            <property name="y">530</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkComboBox" id="comboboxSelCliVenta">
+            <property name="width_request">429</property>
+            <property name="height_request">27</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="model">liststore8</property>
+            <property name="row_span_column">0</property>
+            <signal name="changed" handler="on_comboboxSelCliVenta_changed" swapped="no"/>
+            <child>
+              <object class="GtkCellRendererText" id="cellrenderertext4"/>
+              <attributes>
+                <attribute name="text">0</attribute>
+              </attributes>
+            </child>
+          </object>
+          <packing>
+            <property name="x">30</property>
+            <property name="y">100</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkListStore" id="tabla_bus_paq_new_venta">
+    <columns>
+      <!-- column-name nomPaqVenta -->
+      <column type="gchararray"/>
+      <!-- column-name destPaqVenta -->
+      <column type="gchararray"/>
+      <!-- column-name precioPaqVenta -->
+      <column type="gchararray"/>
+      <!-- column-name idPaqVenta -->
+      <column type="gchararray"/>
+    </columns>
+  </object>
+  <object class="GtkWindow" id="buscaPaqueteVenta">
+    <property name="width_request">492</property>
+    <property name="height_request">640</property>
+    <property name="can_focus">False</property>
+    <property name="tooltip_text" translatable="yes">Búsqueda y selección de paquete para la venta</property>
+    <property name="title" translatable="yes">Nueva venta - Búsqueda de paquete</property>
+    <property name="resizable">False</property>
+    <property name="modal">True</property>
+    <property name="window_position">center-always</property>
+    <property name="icon">icono_app.ico</property>
+    <signal name="destroy" handler="on_buscaPaqueteVenta_destroy" swapped="no"/>
+    <child>
+      <object class="GtkFixed" id="fixed12">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <object class="GtkLabel" id="busca_paq_new_venta1">
+            <property name="width_request">420</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="tooltip_text" translatable="yes">Búsqueda y selección de paquete para la venta</property>
+            <property name="ypad">6</property>
+            <property name="label" translatable="yes">BÚSQUEDA DE PAQUETE</property>
+            <attributes>
+              <attribute name="weight" value="bold"/>
+              <attribute name="foreground" value="#000000000000"/>
+              <attribute name="scale" value="3"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">27</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="term_busca_paq_new_venta1">
+            <property name="width_request">429</property>
+            <property name="height_request">27</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="tooltip_text" translatable="yes">Escribe un término para la búsqueda del paquete</property>
+            <property name="invisible_char">●</property>
+            <property name="text" translatable="yes">Introduzca término de búsqueda...</property>
+            <property name="invisible_char_set">True</property>
+            <property name="primary_icon_activatable">False</property>
+            <property name="secondary_icon_activatable">False</property>
+            <property name="primary_icon_sensitive">True</property>
+            <property name="secondary_icon_sensitive">True</property>
+          </object>
+          <packing>
+            <property name="x">30</property>
+            <property name="y">160</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="btn_busq_paq_new_venta1">
+            <property name="label" translatable="yes">_Buscar</property>
+            <property name="width_request">100</property>
+            <property name="height_request">29</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="tooltip_text" translatable="yes">Pulse para buscar paquete</property>
+            <property name="use_underline">True</property>
+            <signal name="clicked" handler="on_btn_busq_paq_new_venta1_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">195</property>
+            <property name="y">220</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkScrolledWindow" id="scrolledwindow5">
+            <property name="width_request">429</property>
+            <property name="height_request">200</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="hscrollbar_policy">automatic</property>
+            <property name="vscrollbar_policy">automatic</property>
+            <child>
+              <object class="GtkTreeView" id="treeview2">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="tooltip_text" translatable="yes">Resultados de la búsqueda</property>
+                <property name="model">tabla_bus_paq_new_venta</property>
+                <property name="headers_clickable">False</property>
+                <signal name="cursor-changed" handler="on_treeview2_cursor_changed" swapped="no"/>
+                <signal name="row-activated" handler="on_treeview2_row_activated" swapped="no"/>
+                <child>
+                  <object class="GtkTreeViewColumn" id="treeviewcolumn23">
+                    <property name="min_width">110</property>
+                    <property name="title" translatable="yes">Nombre</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkTreeViewColumn" id="treeviewcolumn24">
+                    <property name="min_width">110</property>
+                    <property name="title" translatable="yes">Destino</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkTreeViewColumn" id="treeviewcolumn25">
+                    <property name="min_width">110</property>
+                    <property name="title" translatable="yes">Precio</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="x">30</property>
+            <property name="y">284</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="cancel_busc_paq_new_venta1">
+            <property name="label" translatable="yes">Cancelar</property>
+            <property name="width_request">200</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="tooltip_text" translatable="yes">Cancelar búsqueda de paquete</property>
+            <signal name="clicked" handler="on_cancel_busc_paq_new_venta1_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">30</property>
+            <property name="y">530</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="save_busc_paq_new_venta1">
+            <property name="label" translatable="yes">Aceptar</property>
+            <property name="width_request">200</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="tooltip_text" translatable="yes">Aceptar y seleccionar paquete</property>
+            <signal name="clicked" handler="on_save_busc_paq_new_venta1_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">260</property>
+            <property name="y">530</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkComboBox" id="comboboxSelPaqVenta1">
+            <property name="width_request">429</property>
+            <property name="height_request">27</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="model">liststore9</property>
+            <property name="row_span_column">0</property>
+            <signal name="changed" handler="on_comboboxSelPaqVenta1_changed" swapped="no"/>
+            <child>
+              <object class="GtkCellRendererText" id="cellrenderertext5"/>
+              <attributes>
+                <attribute name="text">0</attribute>
+              </attributes>
+            </child>
+          </object>
+          <packing>
+            <property name="x">30</property>
+            <property name="y">100</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkMessageDialog" id="ventanaAcercaDe">
+    <property name="can_focus">False</property>
+    <property name="tooltip_text" translatable="yes">Información acerca de la aplicación</property>
+    <property name="border_width">5</property>
+    <property name="title" translatable="yes">Acerca de</property>
+    <property name="window_position">center</property>
+    <property name="icon">icono_app.ico</property>
+    <property name="type_hint">dialog</property>
+    <property name="skip_taskbar_hint">True</property>
+    <property name="buttons">close</property>
+    <property name="text" translatable="yes">Gestión de viajes
+Versión 1.0.4
+Desarrollo de la aplicación por Rubén Segura Romo</property>
+    <child internal-child="vbox">
+      <object class="GtkVBox" id="dialog-vbox21">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="spacing">2</property>
+        <child internal-child="action_area">
+          <object class="GtkHButtonBox" id="dialog-action_area21">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="layout_style">end</property>
+            <child>
+              <placeholder/>
+            </child>
+            <child>
+              <placeholder/>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkMessageDialog" id="ventanaError">
+    <property name="can_focus">False</property>
+    <property name="tooltip_text" translatable="yes">Ha ocurrido un error al realizar la acción</property>
+    <property name="border_width">5</property>
+    <property name="title" translatable="yes">Error</property>
+    <property name="resizable">False</property>
+    <property name="window_position">center-always</property>
+    <property name="icon">icono_app.ico</property>
+    <property name="type_hint">dialog</property>
+    <property name="skip_taskbar_hint">True</property>
+    <property name="message_type">error</property>
+    <property name="text" translatable="yes">Ha ocurrido un error:</property>
+    <child internal-child="vbox">
+      <object class="GtkVBox" id="dialog-vbox4">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="spacing">2</property>
+        <child internal-child="action_area">
+          <object class="GtkHButtonBox" id="dialog-action_area4">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="layout_style">center</property>
+            <child>
+              <object class="GtkButton" id="button4AcepBusqError">
+                <property name="label" translatable="yes">Aceptar</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">False</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+    <action-widgets>
+      <action-widget response="0">button4AcepBusqError</action-widget>
+    </action-widgets>
+  </object>
+</interface>
